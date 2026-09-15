@@ -1,0 +1,13 @@
+{
+  "name": "cookie-sections-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free Node.js login and cookie sections example",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

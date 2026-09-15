@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie Sections</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">cookie<span>sections</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#members">Members</a>
+      <a href="#about">About cookies</a>
+    </nav>
+    <button id="logout-button" class="button button-quiet hidden" type="button">Log out</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <p class="eyebrow">A practical Node.js example</p>
+      <h1>One cookie.<br><em>Three sections.</em></h1>
+      <p class="hero-copy">See how a small server can keep a user signed in while the page stays simple, readable, and honest about what is protected.</p>
+      <a class="button" href="#members">Explore the members area <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section id="members" class="section members-section">
+      <div class="section-heading">
+        <p class="eyebrow">Section 02</p>
+        <h2>Members area</h2>
+      </div>
+      <div id="logged-out" class="panel login-panel">
+        <div>
+          <p class="panel-kicker">Private section</p>
+          <h3>Sign in to continue</h3>
+          <p>Use the demo account to receive an encrypted-looking, opaque session id cookie.</p>
+        </div>
+        <form id="login-form">
+          <label>Username <input name="username" autocomplete="username" value="demo" required></label>
+          <label>Password <input name="password" type="password" autocomplete="current-password" value="cookies123" required></label>
+          <button class="button" type="submit">Log in <span aria-hidden="true">↗</span></button>
+          <p id="login-message" class="form-message" role="status"></p>
+        </form>
+      </div>
+      <div id="logged-in" class="panel welcome-panel hidden">
+        <div>
+          <p class="panel-kicker">Authenticated</p>
+          <h3 id="welcome-title">Welcome back.</h3>
+          <p id="private-message"></p>
+        </div>
+        <div class="status-mark" aria-hidden="true">✓</div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-heading">
+        <p class="eyebrow">Section 03</p>
+        <h2>What the cookie does</h2>
+      </div>
+      <div class="concept-grid">
+        <article><span>01</span><h3>Identify</h3><p>The browser stores only a random session id in an `HttpOnly` cookie.</p></article>
+        <article><span>02</span><h3>Protect</h3><p>The server checks that id before returning private data.</p></article>
+        <article><span>03</span><h3>Forget</h3><p>Logout deletes the server session and expires the cookie.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built with Node.js core APIs <span>·</span> No framework required</footer>
+</body>
+</html>
